@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projets — Bouguila Ranim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="dot"></span> RANIM.BOUGUILA</a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">≡</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="projets.html" aria-current="page">Projets</a></li>
+      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section style="padding-top: 96px; padding-bottom: 40px;">
+    <div class="wrap">
+      <div class="eyebrow">Travaux</div>
+      <h1 class="reveal">Projets</h1>
+      <p style="max-width:600px;" class="reveal">
+        Un stage en entreprise et trois projets académiques, du prototype de recherche
+        au système déployable. Code source disponible sur GitHub pour chacun.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 20px;">
+    <div class="wrap" style="display:flex; flex-direction:column; gap: 32px;">
+
+      <!-- PROJET 1 : GPRO -->
+      <div class="frame reveal">
+        <span class="frame-tag">Stage — 2026</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Module Bureau d'Ordre — GPRO Consulting</h3>
+        <p>
+          Stage de développeuse full-stack &amp; IA (2 mois). Développement d'un module de
+          dématérialisation de documents combinant un pipeline OCR, un workflow de validation
+          par machine à états et un dashboard analytique avec détection d'anomalies.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Pipeline OCR : OpenCV, Tesseract, LayoutLMv3</li>
+          <li>Backend : Spring Boot, Python (FastAPI)</li>
+          <li>Frontend : Angular, dashboard Chart.js</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Python / FastAPI</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Tesseract</span>
+          <span class="tag">LayoutLM</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Docker</span>
+        </div>
+        <div class="btn-row" style="margin-top: 20px;">
+          <a href="https://github.com/Ranim638515/bureau-d-ordre" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+        </div>
+      </div>
+
+      <!-- PROJET 2 : CTI Multi-agent -->
+      <div class="frame reveal">
+        <span class="frame-tag">Projet académique — 2026</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Système Multi-Agents de Cyber Threat Intelligence (CTI)</h3>
+        <p>
+          Automatisation de la surveillance de cybersécurité via une architecture RAG agentique :
+          des agents spécialisés analysent les menaces, effectuent des recherches web et génèrent
+          des rapports d'alerte en temps réel.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Orchestration multi-agents avec LangGraph</li>
+          <li>Récupération contextuelle des menaces via base vectorielle FAISS</li>
+          <li>Génération de rapports d'alerte automatisée</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">LangChain / LangGraph</span>
+          <span class="tag">LLMs</span>
+          <span class="tag">FAISS</span>
+          <span class="tag">FastAPI</span>
+        </div>
+        <div class="btn-row" style="margin-top: 20px;">
+          <a href="https://github.com/yoyo2-hub/Multi_Agent_CTI_with_RAG" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+        </div>
+      </div>
+
+      <!-- PROJET 3 : Recommandation e-commerce -->
+      <div class="frame reveal">
+        <span class="frame-tag">Projet académique — 2026</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Système de Recommandation E-commerce en Temps Réel</h3>
+        <p>
+          Moteur de recommandation vestimentaire basé sur le comportement utilisateur (vues, clics),
+          construit sur une architecture événementielle temps réel.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Ingestion des événements via pipeline Apache Kafka</li>
+          <li>Traitement applicatif avec Spring Boot</li>
+          <li>Stockage MongoDB Atlas, exposition via API REST</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Java 17</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Apache Kafka</span>
+          <span class="tag">MongoDB Atlas</span>
+          <span class="tag">API REST</span>
+        </div>
+        <div class="btn-row" style="margin-top: 20px;">
+          <a href="https://github.com/yoyo2-hub/Real-Time_E-commerce_Platform-Recommendation_System" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+        </div>
+      </div>
+
+      <!-- PROJET 4 : IoT -->
+      <div class="frame reveal">
+        <span class="frame-tag">Projet académique — 2026</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Maison Intelligente IoT & Surveillance IA</h3>
+        <p>
+          Système bout-en-bout combinant télémétrie IoT temps réel et détection d'anomalies par IA,
+          avec actions de sécurité autonomes et contrôle à distance.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Pipeline ESP32 / MQTT → AWS IoT Core</li>
+          <li>Analyse de séries temporelles (Timestream, DynamoDB)</li>
+          <li>Détection d'anomalies par Isolation Forest, alertes automatisées</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">ESP32</span>
+          <span class="tag">MQTT</span>
+          <span class="tag">AWS IoT Core</span>
+          <span class="tag">DynamoDB</span>
+          <span class="tag">Timestream</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Flask</span>
+        </div>
+        <div class="btn-row" style="margin-top: 20px;">
+          <a href="https://github.com/emna1ghorbel/iot_project" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="foot-note">© 2026 Bouguila Ranim</span>
+    <ul class="foot-links">
+      <li><a href="mailto:ranim.bouguila@enis.tn">Email</a></li>
+      <li><a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="tel:+21695441071">+216 95 441 071</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

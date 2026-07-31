@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours — Bouguila Ranim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .timeline{ position:relative; padding-left: 28px; border-left: 1px solid var(--border); }
+  .t-item{ position:relative; margin-bottom: 44px; }
+  .t-item:last-child{ margin-bottom:0; }
+  .t-item::before{
+    content:""; position:absolute; left:-33px; top:4px;
+    width:9px; height:9px; border-radius:50%;
+    background: var(--bg); border: 2px solid var(--accent);
+  }
+  .t-date{ font-family: var(--font-display); font-size:12px; color: var(--accent); letter-spacing:0.04em; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="dot"></span> RANIM.BOUGUILA</a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">≡</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="parcours.html" aria-current="page">Parcours</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section style="padding-top: 96px; padding-bottom: 40px;">
+    <div class="wrap">
+      <div class="eyebrow">Trajectoire</div>
+      <h1 class="reveal">Parcours</h1>
+      <p style="max-width:600px;" class="reveal">
+        Expérience professionnelle, formation et engagement associatif.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section style="padding-top:20px;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Expérience professionnelle</div>
+        <h2 class="reveal">Stages</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-date">2026 — 2 mois</div>
+          <h3>Stagiaire Développeuse Full-Stack &amp; IA — GPRO Consulting</h3>
+          <p>
+            Module Bureau d'Ordre : développement d'un pipeline OCR (OpenCV, Tesseract, LayoutLMv3),
+            d'un workflow de validation par machine à états, et d'un dashboard analytique
+            avec détection d'anomalies (Chart.js).
+          </p>
+          <div class="tags">
+            <span class="tag">Spring Boot</span><span class="tag">Angular</span>
+            <span class="tag">Python</span><span class="tag">Docker</span><span class="tag">Git</span>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">2025 — 1 mois</div>
+          <h3>Stagiaire Ouvrière — Tunisie Télécom</h3>
+          <p>
+            Découverte du fonctionnement interne d'une grande entreprise de télécommunications
+            et de ses différents services techniques. Observation des processus métiers et de
+            l'environnement professionnel en entreprise.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMATION -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Formation</div>
+        <h2 class="reveal">Études</h2>
+      </div>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-date">2024 — Présent</div>
+          <h3>Diplôme d'Ingénieur en Informatique</h3>
+          <p>
+            École Nationale d'Ingénieurs de Sfax (ENIS), Sfax, Tunisie — Filière Génie Informatique
+            et Mathématiques Appliquées, spécialisation Intelligence Artificielle et Systèmes Informatiques.
+          </p>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-date">2022 — 2024</div>
+          <h3>Cycle préparatoire, option Mathématiques-Physique</h3>
+          <p>
+            Institut Préparatoire aux Études d'Ingénieurs de Monastir (IPEIM), Monastir, Tunisie —
+            formation intensive en mathématiques et en sciences physiques.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIE ASSOCIATIVE -->
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Engagement</div>
+        <h2 class="reveal">Vie associative</h2>
+      </div>
+      <div class="grid-3">
+        <div class="frame reveal">
+          <span class="frame-tag">IEEE</span>
+          <h3>Membre actif</h3>
+          <p>Participation à des ateliers techniques et des événements de réseautage.</p>
+        </div>
+        <div class="frame reveal">
+          <span class="frame-tag">PyFac</span>
+          <h3>Organisatrice principale</h3>
+          <p>Organisation de PyFac 2025 et 2026, forum d'entreprises favorisant les échanges avec des professionnels.</p>
+        </div>
+        <div class="frame reveal">
+          <span class="frame-tag">Club Radio</span>
+          <h3>Membre active</h3>
+          <p>Implication dans la création de contenu et la production technique du club radio universitaire.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="foot-note">© 2026 Bouguila Ranim</span>
+    <ul class="foot-links">
+      <li><a href="mailto:ranim.bouguila@enis.tn">Email</a></li>
+      <li><a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="tel:+21695441071">+216 95 441 071</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

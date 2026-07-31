@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Bouguila Ranim</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .lang-bar{ height:6px; background: var(--surface-2); border-radius:3px; overflow:hidden; margin-top:8px; }
+  .lang-fill{ height:100%; background: var(--accent); width:0; transition: width 1.1s ease; }
+  .lang-fill.in-view{ }
+  .contact-list{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:18px; }
+  .contact-list a{ font-family: var(--font-display); font-size: 1.05rem; color: var(--text); }
+  .contact-list a:hover{ color: var(--accent); }
+  .contact-list .label{ display:block; font-family: var(--font-body); font-size: 12px; color: var(--text-muted); margin-bottom:4px; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Aller au contenu</a>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="dot"></span> RANIM.BOUGUILA</a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">≡</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <section style="padding-top: 96px; padding-bottom: 40px;">
+    <div class="wrap">
+      <div class="eyebrow">Prenons contact</div>
+      <h1 class="reveal">Contact</h1>
+      <p style="max-width:600px;" class="reveal">
+        Ouverte aux opportunités de stage de fin d'études (PFE) en intelligence artificielle,
+        vision par ordinateur ou développement full-stack.
+      </p>
+      <div class="btn-row reveal">
+        <a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener" class="btn btn-primary">Télécharger mon CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px;">
+    <div class="wrap grid-2">
+
+      <div class="frame reveal">
+        <span class="frame-tag">Coordonnées</span>
+        <ul class="contact-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:ranim.bouguila@enis.tn">ranim.bouguila@enis.tn</a>
+          </li>
+          <li>
+            <span class="label">Téléphone</span>
+            <a href="tel:+21695441071">+216 95 441 071</a>
+          </li>
+          <li>
+            <span class="label">LinkedIn</span>
+            <a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">linkedin.com/in/ranim-bouguila</a>
+          </li>
+          <li>
+            <span class="label">Localisation</span>
+            <a href="#" style="pointer-events:none;">Monastir, Tunisie</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="frame reveal">
+        <span class="frame-tag">Langues</span>
+        <div style="margin-bottom:18px;">
+          <div style="display:flex; justify-content:space-between;"><span>Arabe</span><span style="color:var(--text-muted); font-family:var(--font-display); font-size:12px;">Langue maternelle</span></div>
+          <div class="lang-bar"><div class="lang-fill" data-w="100"></div></div>
+        </div>
+        <div style="margin-bottom:18px;">
+          <div style="display:flex; justify-content:space-between;"><span>Français</span><span style="color:var(--text-muted); font-family:var(--font-display); font-size:12px;">Courant — C1</span></div>
+          <div class="lang-bar"><div class="lang-fill" data-w="90"></div></div>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between;"><span>Anglais</span><span style="color:var(--text-muted); font-family:var(--font-display); font-size:12px;">Technique — B2</span></div>
+          <div class="lang-bar"><div class="lang-fill" data-w="70"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Savoir-être</div>
+        <h2 class="reveal">Compétences comportementales</h2>
+      </div>
+      <div class="tags reveal">
+        <span class="tag">Communication</span>
+        <span class="tag">Esprit d'équipe</span>
+        <span class="tag">Adaptabilité</span>
+        <span class="tag">Gestion de projet et rigueur</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="foot-note">© 2026 Bouguila Ranim</span>
+    <ul class="foot-links">
+      <li><a href="mailto:ranim.bouguila@enis.tn">Email</a></li>
+      <li><a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="tel:+21695441071">+216 95 441 071</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // Anime les barres de langues une fois visibles
+  document.addEventListener('DOMContentLoaded', () => {
+    const bars = document.querySelectorAll('.lang-fill');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.style.width = entry.target.dataset.w + '%';
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    bars.forEach(b => io.observe(b));
+  });
+</script>
+</body>
+</html>
