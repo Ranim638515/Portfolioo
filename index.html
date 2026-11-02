@@ -4,175 +4,346 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ranim Bouguila — AI Engineering Portfolio</title>
-<meta name="description" content="Portfolio of Ranim Bouguila, final-year computer engineering student specialized in multi-agent AI systems and LLM workflows.">
+<meta name="description" content="Portfolio of Ranim Bouguila, final-year computer engineering student focused on multi-agent AI systems and LLM workflows.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23007aff'/%3E%3Ctext x='16' y='22' font-size='17' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a href="#main" class="skip-link">Skip to content</a>
 
-<nav class="site-nav">
-  <div class="wrap">
-    <a href="index.html" class="brand"><span class="dot"></span> RANIM.BOUGUILA</a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">≡</button>
-    <ul class="nav-links">
-      <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="projets.html">Projects</a></li>
-      <li><a href="parcours.html">Background</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener">Resume</a></li>
-    </ul>
+<!-- LOCK SCREEN -->
+<div id="lock" role="dialog" aria-label="Welcome">
+  <div class="lock-time" id="lockTime">9:41</div>
+  <div class="lock-date" id="lockDate">Monday, November 2</div>
+  <div class="lock-user">
+    <div class="avatar">RB</div>
+    <div class="lock-name">Ranim Bouguila</div>
+    <button class="lock-btn" id="enterBtn" type="button">Enter portfolio</button>
+    <div class="lock-hint">or press Enter</div>
   </div>
-</nav>
+</div>
 
-<main id="main">
+<!-- MENU BAR -->
+<header class="menubar">
+  <div class="mb-left">
+    <div class="menu-wrap">
+      <button class="mb-item apple" id="appleBtn" type="button" aria-label="Apple menu" aria-haspopup="true" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 7.800c-1.100-1.200-4.600-1.500-5.600 2-1 3.500 1.500 8.700 3.500 8.700 1 0 1.500-.6 2.100-.6s1.100.6 2.100.6c2 0 4.500-5.200 3.500-8.700-1-3.500-4.500-3.200-5.600-2z"/><path fill="currentColor" d="M12 7.600c-.2-2 .9-3.700 3.200-4.200.2 2.200-1 3.900-3.200 4.200z"/></svg>
+      </button>
+      <ul class="menu-pop" id="applePop" role="menu" hidden>
+        <li><button type="button" role="menuitem" data-open="about">About Ranim</button></li>
+        <li><a role="menuitem" href="cv_quickprime.pdf" download>Download resume</a></li>
+        <li class="sep" role="separator"></li>
+        <li><button type="button" role="menuitem" id="lockBtn">Lock screen</button></li>
+      </ul>
+    </div>
+    <span class="mb-item app-name" id="appName">Finder</span>
+    <span class="mb-item dim hide-sm">File</span>
+    <span class="mb-item dim hide-sm">Edit</span>
+    <span class="mb-item dim hide-sm">View</span>
+    <span class="mb-item dim hide-sm">Window</span>
+    <span class="mb-item dim hide-sm">Help</span>
+  </div>
+  <div class="mb-right">
+    <svg class="mb-ico hide-sm" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M2.500 9a14 14 0 0 1 19 0M5.500 12.500a10 10 0 0 1 13 0M8.500 16a5.500 5.500 0 0 1 7 0"/><circle cx="12" cy="19" r="1.300" fill="currentColor"/></svg>
+    <svg class="mb-ico hide-sm" viewBox="0 0 28 24" width="22" height="16" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.600"/><rect x="4" y="8" width="14" height="8" rx="1.500" fill="currentColor"/><rect x="23" y="10" width="2.500" height="4" rx="1" fill="currentColor"/></svg>
+    <span class="mb-item clock" id="clock">Mon Nov 2&nbsp;&nbsp;2:05 PM</span>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section style="padding-top: 110px;">
-    <div class="wrap">
-      <div class="eyebrow">Portfolio — Computer Engineering / AI</div>
-      <h1 class="reveal">Ranim Bouguila</h1>
-      <p style="font-size:1.15rem; max-width:640px; color: var(--text);" class="reveal">
-        Final-year <strong>Computer Engineering</strong> student focused on
-        <strong>multi-agent AI systems &amp; LLM workflows</strong> — National Engineering School of Sfax (ENIS).
-      </p>
-      <p style="max-width: 600px;" class="reveal">
+<!-- DESKTOP -->
+<main class="desktop" id="desktop">
+
+  <div class="desk-icons" aria-label="Desktop">
+    <button class="desk-icon" type="button" data-open="projects">
+      <span class="di-img folder"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+      <span class="di-label">Projects</span>
+    </button>
+    <button class="desk-icon" type="button" data-open="resume">
+      <span class="di-img pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#3a3a3c" stroke-width="1.600" stroke-linejoin="round" d="M7 3h7l5 5v13H7zM14 3v5h5"/><path stroke="#c0392b" stroke-width="1.800" stroke-linecap="round" d="M9.500 16h6"/></svg></span>
+      <span class="di-label">cv_quickprime.pdf</span>
+    </button>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="win" id="win-about" data-app="about" data-name="Finder" role="dialog" aria-label="About Ranim" hidden>
+    <header class="titlebar">
+      <div class="lights"><button class="l close" type="button" aria-label="Close"></button><button class="l min" type="button" aria-label="Minimize"></button><button class="l max" type="button" aria-label="Zoom"></button></div>
+      <div class="title">About Ranim</div>
+    </header>
+    <div class="win-body about">
+      <div class="about-head">
+        <div class="avatar lg">RB</div>
+        <div>
+          <h1>Ranim Bouguila</h1>
+          <p class="role">AI Engineering Student · Multi-Agent Systems &amp; LLM Workflows</p>
+          <p class="avail"><span class="pulse"></span>Open to a 4 to 6-month end-of-studies internship (PFE) in agentic AI</p>
+        </div>
+      </div>
+      <p>
+        Final-year Computer Engineering student at the National Engineering School of Sfax (ENIS).
         I build agents that plan, write, review and correct their own output with LangGraph,
         generate reports with local LLMs, and serve them behind REST APIs with Docker.
-        Currently seeking a 4 to 6-month end-of-studies internship (PFE) in agentic AI.
       </p>
-      <div class="btn-row reveal">
-        <a href="projets.html" class="btn btn-primary">View my projects</a>
-        <a href="contact.html" class="btn btn-ghost">Contact me</a>
-        <a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download my resume</a>
+      <div class="chips">
+        <span class="chip">1 AI &amp; full-stack internship</span>
+        <span class="chip">5 technical projects</span>
+        <span class="chip">Arabic · French · English</span>
+      </div>
+      <div class="btn-row">
+        <button class="btn primary" type="button" data-open="projects">View projects</button>
+        <button class="btn" type="button" data-open="resume">Open resume</button>
+        <button class="btn" type="button" data-open="contact">Get in touch</button>
       </div>
     </div>
   </section>
 
-  <!-- AT A GLANCE -->
-  <section>
-    <div class="wrap">
-      <div class="grid-3">
-        <div class="frame reveal">
-          <span class="frame-tag">01</span>
-          <h3>1 AI &amp; full-stack internship</h3>
-          <p>OCR pipelines and monitoring dashboards for an AI document-intelligence system at GPRO Consulting.</p>
-        </div>
-        <div class="frame reveal">
-          <span class="frame-tag">02</span>
-          <h3>5 technical projects</h3>
-          <p>Graph-RAG assistant, cyber threat intelligence, TrustRAG, MCP server for CI/CD, real-time e-commerce.</p>
-        </div>
-        <div class="frame reveal">
-          <span class="frame-tag">03</span>
-          <h3>3 languages</h3>
-          <p>Arabic (native), French (B2), English (B2).</p>
-        </div>
+  <!-- PROJECTS (Finder) -->
+  <section class="win wide" id="win-projects" data-app="projects" data-name="Finder" role="dialog" aria-label="Projects" hidden>
+    <header class="titlebar">
+      <div class="lights"><button class="l close" type="button" aria-label="Close"></button><button class="l min" type="button" aria-label="Minimize"></button><button class="l max" type="button" aria-label="Zoom"></button></div>
+      <div class="title">Projects</div>
+    </header>
+    <div class="win-body split">
+      <nav class="sidebar" aria-label="Projects list">
+        <div class="side-title">Academic projects</div>
+        <button type="button" class="side-item active" data-proj="graphrag">Graph-RAG Assistant</button>
+        <button type="button" class="side-item" data-proj="cti">Cyber Threat Intelligence</button>
+        <button type="button" class="side-item" data-proj="trustrag">TrustRAG</button>
+        <button type="button" class="side-item" data-proj="mcp">MCP Code Review Server</button>
+        <button type="button" class="side-item" data-proj="shop">Real-Time E-Commerce</button>
+        <div class="side-title">Internship</div>
+        <button type="button" class="side-item" data-proj="gpro">GPRO Consulting</button>
+      </nav>
+      <div class="pane">
+
+        <article class="proj" data-proj-pane="graphrag">
+          <h2>Multi-Agent Research and Graph-RAG Assistant</h2>
+          <p>A LangGraph multi-agent workflow that plans its steps, retrieves with hybrid RAG, Neo4j Graph-RAG and Text-to-SQL, then critiques and corrects its own answers.</p>
+          <ul>
+            <li>Planning, retrieval, critique and correction loop</li>
+            <li>Hybrid RAG with FAISS, Neo4j Graph-RAG and Text-to-SQL</li>
+            <li>Documents ingested with OCR, served by a FastAPI REST API</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">FAISS</span><span class="tag">Neo4j</span><span class="tag">FastAPI</span><span class="tag">Tesseract OCR</span></div>
+        </article>
+
+        <article class="proj" data-proj-pane="cti" hidden>
+          <h2>Multi-Agent Cyber Threat Intelligence System</h2>
+          <p>A multi-agent system that correlates OSINT sources with a local LLM and generates threat reports automatically.</p>
+          <ul>
+            <li>Local LLM (Ollama) correlating OSINT sources</li>
+            <li>Critic and moderator agents reviewing the output for bias</li>
+            <li>Automated report generation, developed with Cursor</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">FAISS</span><span class="tag">FastAPI</span></div>
+          <a class="btn primary" href="https://github.com/yoyo2-hub/Multi_Agent_CTI_with_RAG" target="_blank" rel="noopener">View code on GitHub</a>
+        </article>
+
+        <article class="proj" data-proj-pane="trustrag" hidden>
+          <h2>TrustRAG: Trustworthy Agentic RAG Platform</h2>
+          <p>A multi-agent RAG and Text-to-SQL platform that cites its sources and verifies every answer against evidence.</p>
+          <ul>
+            <li>Source citations and evidence-based answer verification</li>
+            <li>Served by a FastAPI REST API in Docker</li>
+            <li>Validated by 85 automated tests, developed with Claude Code</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LangGraph</span><span class="tag">FAISS</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+        </article>
+
+        <article class="proj" data-proj-pane="mcp" hidden>
+          <h2>Agentic MCP Server for Code Review and CI/CD</h2>
+          <p>An MCP server that gives a LangGraph agent controlled access to GitHub repositories and CI/CD pipelines to review pull requests.</p>
+          <ul>
+            <li>Controlled agent access to repositories and pipelines through MCP</li>
+            <li>Human approval step and structured logging</li>
+            <li>GitHub Actions workflows, containerized with Docker and Kubernetes</li>
+          </ul>
+          <div class="tags"><span class="tag">Python</span><span class="tag">MCP</span><span class="tag">LangGraph</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
+        </article>
+
+        <article class="proj" data-proj-pane="shop" hidden>
+          <h2>Real-Time E-Commerce Platform (Full Stack)</h2>
+          <p>A full-stack platform that processes user events in real time.</p>
+          <ul>
+            <li>Spring Boot REST API and Angular front end</li>
+            <li>HTML/CSS/JavaScript storefront</li>
+            <li>Apache Kafka for real-time events, MongoDB Atlas for storage</li>
+          </ul>
+          <div class="tags"><span class="tag">Java 17</span><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">Apache Kafka</span><span class="tag">MongoDB Atlas</span></div>
+          <a class="btn primary" href="https://github.com/yoyo2-hub/Real-Time_E-commerce_Platform-Recommendation_System" target="_blank" rel="noopener">View code on GitHub</a>
+        </article>
+
+        <article class="proj" data-proj-pane="gpro" hidden>
+          <h2>AI Document Intelligence — GPRO Consulting</h2>
+          <p>Full-stack and AI developer internship (2 months, 2026). Contributed to a system that classifies documents, extracts their data with OCR and validates it, integrated with an ERP through REST APIs.</p>
+          <ul>
+            <li>OCR pipelines with confidence thresholds and human feedback</li>
+            <li>Monitoring dashboards to follow the quality of the results</li>
+            <li>ERP integration through REST APIs</li>
+          </ul>
+          <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Angular</span><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Tesseract OCR</span></div>
+          <a class="btn primary" href="https://github.com/Ranim638515/bureau-d-ordre" target="_blank" rel="noopener">View code on GitHub</a>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow">Technical skills</div>
-        <h2 class="reveal">A full-stack foundation, an agentic AI focus</h2>
-        <p class="reveal">From LLM orchestration and RAG to REST APIs, databases and DevOps.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="reveal">
-          <h3>AI &amp; LLM systems</h3>
-          <div class="tags">
-            <span class="tag">LangGraph</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">LLMs (API &amp; local with Ollama)</span>
-            <span class="tag">RAG</span>
-            <span class="tag">GraphRAG</span>
-            <span class="tag">MCP</span>
-            <span class="tag">Prompt engineering</span>
-            <span class="tag">LLM-as-Judge</span>
-          </div>
-        </div>
-        <div class="reveal">
-          <h3>Languages</h3>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Java</span>
-            <span class="tag">SQL</span>
-          </div>
-        </div>
-        <div class="reveal">
-          <h3>Web &amp; APIs</h3>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Angular</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">Flask</span>
-            <span class="tag">Spring Boot</span>
-            <span class="tag">REST APIs</span>
-          </div>
-        </div>
-        <div class="reveal">
-          <h3>Data &amp; DevOps</h3>
-          <div class="tags">
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">FAISS</span>
-            <span class="tag">Neo4j</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Git</span>
-            <span class="tag">GitHub Actions</span>
-            <span class="tag">Linux</span>
-          </div>
-        </div>
-        <div class="reveal">
-          <h3>AI coding tools</h3>
-          <div class="tags">
-            <span class="tag">Claude Code</span>
-            <span class="tag">Cursor</span>
-            <span class="tag">GitHub Copilot</span>
-            <span class="tag">Codex</span>
-            <span class="tag">Google AI Studio</span>
-          </div>
-        </div>
-      </div>
+  <!-- SKILLS (Terminal) -->
+  <section class="win term" id="win-skills" data-app="skills" data-name="Terminal" role="dialog" aria-label="Terminal, skills" hidden>
+    <header class="titlebar">
+      <div class="lights"><button class="l close" type="button" aria-label="Close"></button><button class="l min" type="button" aria-label="Minimize"></button><button class="l max" type="button" aria-label="Zoom"></button></div>
+      <div class="title">ranim — skills — 80×24</div>
+    </header>
+    <div class="win-body terminal">
+      <p><span class="ps">ranim@portfolio ~ %</span> whoami</p>
+      <p class="out">ranim_bouguila — AI engineering student, ENIS</p>
+      <p><span class="ps">ranim@portfolio ~ %</span> cat skills.txt</p>
+      <dl>
+        <dt>AI &amp; LLM systems</dt>
+        <dd>LangGraph, LangChain, LLMs (API and local with Ollama), RAG, GraphRAG, MCP, prompt engineering, LLM-as-Judge</dd>
+        <dt>Languages</dt>
+        <dd>Python, JavaScript, TypeScript, Java, SQL</dd>
+        <dt>Web &amp; APIs</dt>
+        <dd>React, Node.js, Angular, FastAPI, Flask, Spring Boot, REST APIs</dd>
+        <dt>Data &amp; DevOps</dt>
+        <dd>PostgreSQL, MongoDB, FAISS, Neo4j, Docker, Git, GitHub Actions, Linux</dd>
+        <dt>AI coding tools</dt>
+        <dd>Claude Code, Cursor, GitHub Copilot, Codex, Google AI Studio</dd>
+      </dl>
+      <p><span class="ps">ranim@portfolio ~ %</span> <span class="cursor"></span></p>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section style="border-bottom:none; padding-bottom: 110px;">
-    <div class="wrap">
-      <div class="frame reveal" style="text-align:left;">
-        <span class="frame-tag">Availability</span>
-        <h2>Looking for an end-of-studies internship (PFE) in agentic AI</h2>
-        <p>4 to 6 months — motivated by multi-agent systems, trustworthy RAG and LLM workflows.</p>
-        <div class="btn-row">
-          <a href="parcours.html" class="btn btn-ghost">See my background</a>
-          <a href="contact.html" class="btn btn-primary">Contact me</a>
-          <a href="cv_quickprime.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download my resume</a>
-        </div>
+  <!-- BACKGROUND (Notes) -->
+  <section class="win notes" id="win-background" data-app="background" data-name="Notes" role="dialog" aria-label="Notes, background" hidden>
+    <header class="titlebar">
+      <div class="lights"><button class="l close" type="button" aria-label="Close"></button><button class="l min" type="button" aria-label="Minimize"></button><button class="l max" type="button" aria-label="Zoom"></button></div>
+      <div class="title">Background</div>
+    </header>
+    <div class="win-body note">
+      <h2>Experience</h2>
+      <div class="entry">
+        <div class="when">2026 · 2 months</div>
+        <h3>Full-Stack and AI Developer Intern, GPRO Consulting</h3>
+        <p>Contributed to an AI document-intelligence system that classifies documents, extracts their data with OCR and validates it, integrated with an ERP through REST APIs. Built OCR pipelines with confidence thresholds and human feedback, and monitoring dashboards to follow the quality of the results.</p>
+        <p class="stack">Spring Boot, Angular, Python, scikit-learn, Tesseract OCR</p>
       </div>
+      <div class="entry">
+        <div class="when">2025 · 1 month</div>
+        <h3>Worker Intern, Tunisie Telecom</h3>
+        <p>Observed telecommunications operations, technical departments and organizational processes.</p>
+      </div>
+
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="when">2024 to 2027 (expected)</div>
+        <h3>Engineering Degree in Computer Engineering</h3>
+        <p>National Engineering School of Sfax (ENIS), Sfax, Tunisia.</p>
+      </div>
+      <div class="entry">
+        <div class="when">2022 to 2024</div>
+        <h3>Preparatory Cycle in Mathematics &amp; Physics</h3>
+        <p>IPEIM, Monastir, Tunisia.</p>
+      </div>
+      <div class="entry">
+        <div class="when">2022</div>
+        <h3>Mathematics Baccalaureate</h3>
+        <p>Monastir Pioneer High School.</p>
+      </div>
+
+      <h2>Certifications</h2>
+      <p>DataCamp: Introduction to RAG, Introduction to PySpark, ETL and ELT in Python, Introduction to Python, Git courses.</p>
+
+      <h2>Leadership</h2>
+      <ul>
+        <li><strong>PyFac 2025 &amp; 2026:</strong> organizer of the company forum connecting students with professionals.</li>
+        <li><strong>IEEE:</strong> active member.</li>
+        <li><strong>University Radio Club:</strong> member.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT (Mail) -->
+  <section class="win wide" id="win-contact" data-app="contact" data-name="Mail" role="dialog" aria-label="Mail, contact" hidden>
+    <header class="titlebar">
+      <div class="lights"><button class="l close" type="button" aria-label="Close"></button><button class="l min" type="button" aria-label="Minimize"></button><button class="l max" type="button" aria-label="Zoom"></button></div>
+      <div class="title">New message to Ranim</div>
+    </header>
+    <div class="win-body contact">
+      <div class="card">
+        <h2>Contact</h2>
+        <dl class="details">
+          <dt>Email</dt><dd><a href="mailto:ranim.bouguila@enis.tn">ranim.bouguila@enis.tn</a></dd>
+          <dt>Phone</dt><dd><a href="tel:+21695441071">+216 95 441 071</a></dd>
+          <dt>LinkedIn</dt><dd><a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">linkedin.com/in/ranim-bouguila</a></dd>
+          <dt>Location</dt><dd>Monastir, Tunisia</dd>
+        </dl>
+        <h3>Languages</h3>
+        <div class="lang"><span>Arabic</span><em>Native</em></div><div class="bar"><i style="width:100%"></i></div>
+        <div class="lang"><span>French</span><em>B2</em></div><div class="bar"><i style="width:75%"></i></div>
+        <div class="lang"><span>English</span><em>B2</em></div><div class="bar"><i style="width:75%"></i></div>
+        <h3>Soft skills</h3>
+        <div class="tags"><span class="tag">Curious</span><span class="tag">Rigorous</span><span class="tag">Autonomous</span><span class="tag">Teamwork</span></div>
+      </div>
+      <form class="compose" id="mailForm">
+        <label class="row"><span>To</span><input type="text" value="ranim.bouguila@enis.tn" readonly></label>
+        <label class="row"><span>From</span><input type="text" id="mfName" placeholder="Your name" autocomplete="name"></label>
+        <label class="row"><span>Subject</span><input type="text" id="mfSubject" value="Internship opportunity (PFE)"></label>
+        <label class="msg"><span class="sr">Message</span><textarea id="mfBody" rows="7" placeholder="Write your message here"></textarea></label>
+        <div class="send-row"><button class="btn primary" type="submit">Send in your mail app</button></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- RESUME (Preview) -->
+  <section class="win wide tall" id="win-resume" data-app="resume" data-name="Preview" role="dialog" aria-label="Preview, resume" hidden>
+    <header class="titlebar">
+      <div class="lights"><button class="l close" type="button" aria-label="Close"></button><button class="l min" type="button" aria-label="Minimize"></button><button class="l max" type="button" aria-label="Zoom"></button></div>
+      <div class="title">cv_quickprime.pdf</div>
+    </header>
+    <div class="win-body preview">
+      <div class="pv-bar">
+        <a class="btn" href="cv_quickprime.pdf" target="_blank" rel="noopener">Open in new tab</a>
+        <a class="btn primary" href="cv_quickprime.pdf" download>Download</a>
+      </div>
+      <iframe id="pdfFrame" data-src="cv_quickprime.pdf" title="Resume of Ranim Bouguila"></iframe>
+      <p class="pv-note">If the preview does not load on your device, use Open in new tab or Download.</p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span class="foot-note">© 2026 Ranim Bouguila</span>
-    <ul class="foot-links">
-      <li><a href="mailto:ranim.bouguila@enis.tn">Email</a></li>
-      <li><a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="tel:+21695441071">+216 95 441 071</a></li>
-    </ul>
-  </div>
-</footer>
+<!-- DOCK -->
+<nav class="dock" id="dock" aria-label="Applications">
+  <button class="dock-item" type="button" data-open="about" data-label="About">
+    <span class="icon i-about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.500" r="3.600" fill="none" stroke="#fff" stroke-width="1.800"/><path d="M5 20c0-4 3-6.200 7-6.200s7 2.200 7 6.200" fill="none" stroke="#fff" stroke-width="1.800" stroke-linecap="round"/></svg></span><span class="run"></span>
+  </button>
+  <button class="dock-item" type="button" data-open="projects" data-label="Projects">
+    <span class="icon i-folder"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><span class="run"></span>
+  </button>
+  <button class="dock-item" type="button" data-open="skills" data-label="Skills">
+    <span class="icon i-term"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l4 4-4 4M12 17h7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="run"></span>
+  </button>
+  <button class="dock-item" type="button" data-open="background" data-label="Background">
+    <span class="icon i-notes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8h10M7 12h10M7 16h6" fill="none" stroke="#8a6500" stroke-width="1.900" stroke-linecap="round"/></svg></span><span class="run"></span>
+  </button>
+  <button class="dock-item" type="button" data-open="contact" data-label="Contact">
+    <span class="icon i-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.500" width="18" height="13" rx="2.200" fill="none" stroke="#fff" stroke-width="1.800"/><path d="M3.500 7.500l8.500 6 8.500-6" fill="none" stroke="#fff" stroke-width="1.800" stroke-linejoin="round"/></svg></span><span class="run"></span>
+  </button>
+  <button class="dock-item" type="button" data-open="resume" data-label="Resume">
+    <span class="icon i-pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="#3a3a3c" stroke-width="1.700" stroke-linejoin="round" d="M7 3h7l5 5v13H7zM14 3v5h5"/><path stroke="#c0392b" stroke-width="1.900" stroke-linecap="round" d="M9.500 16h6"/></svg></span><span class="run"></span>
+  </button>
+  <span class="dock-sep" aria-hidden="true"></span>
+  <a class="dock-item" href="https://github.com/Ranim638515" target="_blank" rel="noopener" data-label="GitHub" aria-label="GitHub">
+    <span class="icon i-gh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+  <a class="dock-item" href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener" data-label="LinkedIn" aria-label="LinkedIn">
+    <span class="icon i-in"><svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="17" font-size="13" font-weight="700" font-family="Arial, sans-serif" fill="#fff" text-anchor="middle">in</text></svg></span>
+  </a>
+</nav>
 
 <script src="script.js"></script>
 </body>
