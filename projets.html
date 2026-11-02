@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projets — Bouguila Ranim</title>
+<title>Projects — Ranim Bouguila</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a href="#main" class="skip-link">Aller au contenu</a>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <nav class="site-nav">
   <div class="wrap">
     <a href="index.html" class="brand"><span class="dot"></span> RANIM.BOUGUILA</a>
-    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">≡</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">≡</button>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="projets.html" aria-current="page">Projets</a></li>
-      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projets.html" aria-current="page">Projects</a></li>
+      <li><a href="parcours.html">Background</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="CV_Bouguila_Ranim.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="cv_quickprime.pdf" target="_blank" rel="noopener">Resume</a></li>
     </ul>
   </div>
 </nav>
@@ -29,11 +29,11 @@
 
   <section style="padding-top: 96px; padding-bottom: 40px;">
     <div class="wrap">
-      <div class="eyebrow">Travaux</div>
-      <h1 class="reveal">Projets</h1>
+      <div class="eyebrow">Work</div>
+      <h1 class="reveal">Projects</h1>
       <p style="max-width:600px;" class="reveal">
-        Un stage en entreprise et trois projets académiques, du prototype de recherche
-        au système déployable. Code source disponible sur GitHub pour chacun.
+        One industry internship and five projects, centered on multi-agent systems, trustworthy RAG
+        and LLM workflows — from research prototypes to deployable services.
       </p>
     </div>
   </section>
@@ -41,118 +41,159 @@
   <section style="padding-top: 20px;">
     <div class="wrap" style="display:flex; flex-direction:column; gap: 32px;">
 
-      <!-- PROJET 1 : GPRO -->
+      <!-- PROJECT 1: Multi-Agent Research & Graph-RAG -->
       <div class="frame reveal">
-        <span class="frame-tag">Stage — 2026</span>
+        <span class="frame-tag">Academic project</span>
         <div class="corner-tl"></div><div class="corner-tr"></div>
         <div class="corner-bl"></div><div class="corner-br"></div>
-        <h3 style="font-size:1.3rem;">Module Bureau d'Ordre — GPRO Consulting</h3>
+        <h3 style="font-size:1.3rem;">Multi-Agent Research and Graph-RAG Assistant</h3>
         <p>
-          Stage de développeuse full-stack &amp; IA (2 mois). Développement d'un module de
-          dématérialisation de documents combinant un pipeline OCR, un workflow de validation
-          par machine à états et un dashboard analytique avec détection d'anomalies.
+          A LangGraph multi-agent workflow that plans its steps, retrieves with hybrid RAG,
+          Neo4j Graph-RAG and Text-to-SQL, then critiques and corrects its own answers.
         </p>
         <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
-          <li>Pipeline OCR : OpenCV, Tesseract, LayoutLMv3</li>
-          <li>Backend : Spring Boot, Python (FastAPI)</li>
-          <li>Frontend : Angular, dashboard Chart.js</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">Spring Boot</span>
-          <span class="tag">Angular</span>
-          <span class="tag">Python / FastAPI</span>
-          <span class="tag">OpenCV</span>
-          <span class="tag">Tesseract</span>
-          <span class="tag">LayoutLM</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">Docker</span>
-        </div>
-        <div class="btn-row" style="margin-top: 20px;">
-          <a href="https://github.com/Ranim638515/bureau-d-ordre" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
-        </div>
-      </div>
-
-      <!-- PROJET 2 : CTI Multi-agent -->
-      <div class="frame reveal">
-        <span class="frame-tag">Projet académique — 2026</span>
-        <div class="corner-tl"></div><div class="corner-tr"></div>
-        <div class="corner-bl"></div><div class="corner-br"></div>
-        <h3 style="font-size:1.3rem;">Système Multi-Agents de Cyber Threat Intelligence (CTI)</h3>
-        <p>
-          Automatisation de la surveillance de cybersécurité via une architecture RAG agentique :
-          des agents spécialisés analysent les menaces, effectuent des recherches web et génèrent
-          des rapports d'alerte en temps réel.
-        </p>
-        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
-          <li>Orchestration multi-agents avec LangGraph</li>
-          <li>Récupération contextuelle des menaces via base vectorielle FAISS</li>
-          <li>Génération de rapports d'alerte automatisée</li>
+          <li>Planning, retrieval, critique and correction loop with LangGraph</li>
+          <li>Hybrid RAG (FAISS), Neo4j Graph-RAG and Text-to-SQL</li>
+          <li>Documents ingested with OCR, served by a FastAPI REST API</li>
         </ul>
         <div class="tags">
           <span class="tag">Python</span>
-          <span class="tag">LangChain / LangGraph</span>
-          <span class="tag">LLMs</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">FAISS</span>
+          <span class="tag">Neo4j</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Tesseract OCR</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 2: CTI -->
+      <div class="frame reveal">
+        <span class="frame-tag">Academic project</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Multi-Agent Cyber Threat Intelligence System</h3>
+        <p>
+          A multi-agent system that correlates OSINT sources with a local LLM and generates
+          threat reports automatically.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Local LLM (Ollama) correlating OSINT sources</li>
+          <li>Critic and moderator agents reviewing the output for bias</li>
+          <li>Automated report generation, developed with Cursor</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Ollama</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">LangGraph</span>
           <span class="tag">FAISS</span>
           <span class="tag">FastAPI</span>
         </div>
         <div class="btn-row" style="margin-top: 20px;">
-          <a href="https://github.com/yoyo2-hub/Multi_Agent_CTI_with_RAG" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+          <a href="https://github.com/yoyo2-hub/Multi_Agent_CTI_with_RAG" target="_blank" rel="noopener" class="btn btn-primary">View code →</a>
         </div>
       </div>
 
-      <!-- PROJET 3 : Recommandation e-commerce -->
+      <!-- PROJECT 3: TrustRAG -->
       <div class="frame reveal">
-        <span class="frame-tag">Projet académique — 2026</span>
+        <span class="frame-tag">Academic project</span>
         <div class="corner-tl"></div><div class="corner-tr"></div>
         <div class="corner-bl"></div><div class="corner-br"></div>
-        <h3 style="font-size:1.3rem;">Système de Recommandation E-commerce en Temps Réel</h3>
+        <h3 style="font-size:1.3rem;">TrustRAG: Trustworthy Agentic RAG Platform</h3>
         <p>
-          Moteur de recommandation vestimentaire basé sur le comportement utilisateur (vues, clics),
-          construit sur une architecture événementielle temps réel.
+          A multi-agent RAG and Text-to-SQL platform that cites its sources and verifies
+          every answer against evidence.
         </p>
         <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
-          <li>Ingestion des événements via pipeline Apache Kafka</li>
-          <li>Traitement applicatif avec Spring Boot</li>
-          <li>Stockage MongoDB Atlas, exposition via API REST</li>
+          <li>Source citations and evidence-based answer verification</li>
+          <li>Served by a FastAPI REST API in Docker</li>
+          <li>Validated by 85 automated tests, developed with Claude Code</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">FAISS</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 4: MCP Server -->
+      <div class="frame reveal">
+        <span class="frame-tag">Academic project</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Agentic MCP Server for Code Review and CI/CD</h3>
+        <p>
+          An MCP server that gives a LangGraph agent controlled access to GitHub repositories
+          and CI/CD pipelines to review pull requests.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Controlled agent access to repositories and pipelines via MCP</li>
+          <li>Human approval step and structured logging</li>
+          <li>GitHub Actions workflows, containerized with Docker and Kubernetes</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">MCP</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+        </div>
+      </div>
+
+      <!-- PROJECT 5: E-commerce -->
+      <div class="frame reveal">
+        <span class="frame-tag">Academic project</span>
+        <div class="corner-tl"></div><div class="corner-tr"></div>
+        <div class="corner-bl"></div><div class="corner-br"></div>
+        <h3 style="font-size:1.3rem;">Real-Time E-Commerce Platform (Full Stack)</h3>
+        <p>
+          A full-stack platform with real-time processing of user events.
+        </p>
+        <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
+          <li>Spring Boot REST API and Angular front end</li>
+          <li>HTML/CSS/JavaScript storefront</li>
+          <li>Apache Kafka for real-time events, MongoDB Atlas for storage</li>
         </ul>
         <div class="tags">
           <span class="tag">Java 17</span>
           <span class="tag">Spring Boot</span>
+          <span class="tag">Angular</span>
           <span class="tag">Apache Kafka</span>
           <span class="tag">MongoDB Atlas</span>
-          <span class="tag">API REST</span>
         </div>
         <div class="btn-row" style="margin-top: 20px;">
-          <a href="https://github.com/yoyo2-hub/Real-Time_E-commerce_Platform-Recommendation_System" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+          <a href="https://github.com/yoyo2-hub/Real-Time_E-commerce_Platform-Recommendation_System" target="_blank" rel="noopener" class="btn btn-primary">View code →</a>
         </div>
       </div>
 
-      <!-- PROJET 4 : IoT -->
+      <!-- INTERNSHIP: GPRO -->
       <div class="frame reveal">
-        <span class="frame-tag">Projet académique — 2026</span>
+        <span class="frame-tag">Internship — 2026</span>
         <div class="corner-tl"></div><div class="corner-tr"></div>
         <div class="corner-bl"></div><div class="corner-br"></div>
-        <h3 style="font-size:1.3rem;">Maison Intelligente IoT & Surveillance IA</h3>
+        <h3 style="font-size:1.3rem;">AI Document Intelligence — GPRO Consulting</h3>
         <p>
-          Système bout-en-bout combinant télémétrie IoT temps réel et détection d'anomalies par IA,
-          avec actions de sécurité autonomes et contrôle à distance.
+          Full-stack and AI developer internship (2 months). Contributed to a system that classifies
+          documents, extracts their data with OCR and validates it, integrated with an ERP through REST APIs.
         </p>
         <ul style="color: var(--text-muted); padding-left: 18px; margin: 0 0 8px;">
-          <li>Pipeline ESP32 / MQTT → AWS IoT Core</li>
-          <li>Analyse de séries temporelles (Timestream, DynamoDB)</li>
-          <li>Détection d'anomalies par Isolation Forest, alertes automatisées</li>
+          <li>OCR pipelines with confidence thresholds and human feedback</li>
+          <li>Monitoring dashboards to follow the quality of the results</li>
+          <li>ERP integration through REST APIs</li>
         </ul>
         <div class="tags">
-          <span class="tag">ESP32</span>
-          <span class="tag">MQTT</span>
-          <span class="tag">AWS IoT Core</span>
-          <span class="tag">DynamoDB</span>
-          <span class="tag">Timestream</span>
-          <span class="tag">Scikit-learn</span>
-          <span class="tag">Flask</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Python</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">Tesseract OCR</span>
         </div>
         <div class="btn-row" style="margin-top: 20px;">
-          <a href="https://github.com/emna1ghorbel/iot_project" target="_blank" rel="noopener" class="btn btn-primary">Voir le code →</a>
+          <a href="https://github.com/Ranim638515/bureau-d-ordre" target="_blank" rel="noopener" class="btn btn-primary">View code →</a>
         </div>
       </div>
 
@@ -163,7 +204,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span class="foot-note">© 2026 Bouguila Ranim</span>
+    <span class="foot-note">© 2026 Ranim Bouguila</span>
     <ul class="foot-links">
       <li><a href="mailto:ranim.bouguila@enis.tn">Email</a></li>
       <li><a href="https://linkedin.com/in/ranim-bouguila" target="_blank" rel="noopener">LinkedIn</a></li>

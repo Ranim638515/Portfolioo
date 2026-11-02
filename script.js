@@ -1,4 +1,4 @@
-// Reveal au scroll — sobre, une seule fois par élément
+// Scroll reveal — subtle, once per element
 document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelectorAll('.reveal, .frame');
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach(el => el.classList.add('in-view'));
   }
 
-  // Menu mobile
+  // Mobile menu
   const toggle = document.querySelector('.nav-toggle');
   if (toggle){
     toggle.addEventListener('click', () => {
